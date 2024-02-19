@@ -667,7 +667,7 @@ int main(int argc, char **argv)
             } else {
                int lost=0;
                packet_no++;
-               if (loss_percent>0 && 100*((float)rand())/RAND_MAX<loss_percent)
+               if (loss_percent>0 && 100*((float)rand())/(float)RAND_MAX<loss_percent)
                   lost=1;
 
                /*End of stream condition*/

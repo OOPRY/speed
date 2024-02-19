@@ -101,7 +101,7 @@ static int read_samples(FILE *fin,int frame_size, int bits, int channels, int ls
    /*Read input audio*/
    if (size)
    {
-      if (*size >= to_read)
+      if ((size_t)(*size) >= to_read)
       {
          *size -= to_read;
       }
