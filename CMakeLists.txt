@@ -15,7 +15,7 @@ file(GLOB LIB_SOURCES "libspeex/*.c")
 # Define the library
 add_library(speex ${SOURCES} ${LIB_SOURCES})
 
-target_compile_options(speex PRIVATE -D__GNU_LIBRARY__ -D_USE_SSE -DFLOATING_POINT -DUSE_SMALLFT -DEXPORT= -Wno-unused-but-set-variable -Wno-deprecated-non-prototype)
+target_compile_options(speex PRIVATE -D__GNU_LIBRARY__ -DFLOATING_POINT -DUSE_SMALLFT -DEXPORT= -Wno-unused-but-set-variable -Wno-deprecated-non-prototype)
 target_link_libraries(speex PUBLIC ogg)
 target_include_directories(speex PUBLIC "include")
 
